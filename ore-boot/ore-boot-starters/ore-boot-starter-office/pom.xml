@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.oreframework.boot</groupId>
+		<artifactId>ore-boot-starters</artifactId>
+		<version>1.0.10-SNAPSHOT</version>
+	</parent>
+	<artifactId>ore-boot-starter-office</artifactId>
+	<name>Ore Boot Office Starter</name>
+	<description>Ore Boot Office Starter</description>
+
+	<properties>
+		<main.basedir>${basedir}/../..</main.basedir>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.oreframework.boot</groupId>
+			<artifactId>ore-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-commons</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.oreframework.common</groupId>
+			<artifactId>ore-common-office</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.oreframework.common</groupId>
+			<artifactId>ore-common-lang</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.oreframework.common</groupId>
+			<artifactId>ore-common-compress</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+		</dependency>
+
+	</dependencies>
+
+</project>

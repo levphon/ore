@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.oreframework.boot</groupId>
+		<artifactId>ore-boot-starters</artifactId>
+		<version>1.0.10-SNAPSHOT</version>
+	</parent>
+	<artifactId>ore-boot-starter</artifactId>
+	<name>Ore Boot Static Starter</name>
+	<description>Ore Boot Static Starter</description>
+	
+	<properties>
+		<main.basedir>${basedir}/../..</main.basedir>
+	</properties>
+	<dependencies>
+	    <dependency>
+			<groupId>org.oreframework.boot</groupId>
+			<artifactId>ore-boot</artifactId>
+		</dependency>
+		
+		 <dependency>
+			<groupId>org.oreframework.boot</groupId>
+			<artifactId>ore-boot-web</artifactId>
+		</dependency>
+		
+		 <dependency>
+			<groupId>org.oreframework</groupId>
+			<artifactId>ore-web</artifactId>
+		</dependency>
+		
+		<!-- ore-boot-autoconfigure 必须放到前面的位置,如果放在后面application.diamond.properties可能加载不到 -->
+		<dependency>
+			<groupId>org.oreframework.boot</groupId>
+			<artifactId>ore-boot-autoconfigure</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<!-- 排查默认tomcat容器 -->
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<!-- 使用log4j2的时候 spring-boot-starter-logging 要注释-->
+			<!-- <exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions> -->
+			
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jetty</artifactId>
+		</dependency>
+		
+		<!-- 使用log4j2打开注释 -->
+		<!-- <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+		</dependency> -->
+			
+	</dependencies>
+</project>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.oreframework.boot</groupId>
+	<version>1.0.10-SNAPSHOT</version>
+	<artifactId>ore-boot-dependencies</artifactId>
+	<name>Ore Boot Dependencies</name>
+	<description>Ore Boot Dependencies</description>
+	<packaging>pom</packaging>
+
+	<properties>
+		<!-- Ore-FrameWork versions -->
+		<ore.oreframework.version>2.0.9-SNAPSHOT</ore.oreframework.version>
+
+		<!-- Third Party versions -->
+		<spring.boot.version>1.5.1.RELEASE</spring.boot.version>
+
+		<!-- Plugin versions -->
+		<maven.version>3.1.1</maven.version>
+		<maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
+		<maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
+	</properties>
+
+	<prerequisites>
+		<maven>3.2.1</maven>
+	</prerequisites>
+
+	<dependencyManagement>
+
+		<!-- Third Party -->
+		<dependencies>
+
+			<!-- Ore OreFramework Boot -->
+			<dependency>
+				<groupId>org.oreframework.boot</groupId>
+				<artifactId>ore-boot</artifactId>
+				<version>1.0.10-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.oreframework.boot</groupId>
+				<artifactId>ore-boot-web</artifactId>
+				<version>1.0.10-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.oreframework.boot</groupId>
+				<artifactId>ore-boot-autoconfigure</artifactId>
+				<version>1.0.10-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.oreframework.boot</groupId>
+				<artifactId>ore-boot-test-autoconfigure</artifactId>
+				<version>1.0.10-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.oreframework.boot</groupId>
+				<artifactId>ore-boot-starter</artifactId>
+				<version>1.0.10-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.oreframework.boot</groupId>
+				<artifactId>ore-boot-starter-diamond</artifactId>
+				<version>1.0.10-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>org.oreframework.boot</groupId>
+				<artifactId>ore-boot-starter-dubbo</artifactId>
+				<version>1.0.10-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.oreframework.boot</groupId>
+				<artifactId>ore-boot-starter-static</artifactId>
+				<version>1.0.10-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.oreframework.boot</groupId>
+				<artifactId>ore-boot-starter-datasource</artifactId>
+				<version>1.0.10-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>org.oreframework.boot</groupId>
+				<artifactId>ore-boot-starter-wechat</artifactId>
+				<version>1.0.10-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>org.oreframework.boot</groupId>
+				<artifactId>ore-boot-starter-kafka</artifactId>
+				<version>1.0.10-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>org.oreframework.boot</groupId>
+				<artifactId>ore-boot-starter-redis</artifactId>
+				<version>1.0.10-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>org.oreframework.boot</groupId>
+				<artifactId>ore-boot-starter-cas</artifactId>
+				<version>1.0.10-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>org.oreframework.boot</groupId>
+				<artifactId>ore-boot-starter-office</artifactId>
+				<version>1.0.10-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>org.oreframework.boot</groupId>
+				<artifactId>ore-boot-starter-rop</artifactId>
+				<version>1.0.10-SNAPSHOT</version>
+			</dependency>
+
+			<!-- Ore Framework -->
+			<dependency>
+				<groupId>org.oreframework</groupId>
+				<artifactId>ore-dependencies</artifactId>
+				<version>${ore.oreframework.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<!-- Import dependency management from Spring Boot -->
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring.boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven-compiler-plugin.version}</version>
+					<configuration>
+						<source>${java.version}</source>
+						<target>${java.version}</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>${maven-deploy-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-install-plugin</artifactId>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<executions>
+						<execution>
+							<goals>
+								<goal>jar</goal>
+								<goal>test-jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+					<version>${spring.boot.version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>nexus-releases</id>
+			<name>Local Nexus Releases Repository</name>
+			<url>http://192.168.3.233:8787/nexus/content/repositories/releases</url>
+		</repository>
+
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<name>Local Nexus Snapshots Repository</name>
+			<url>http://192.168.3.233:8787/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<repositories>
+		<!-- Repositories to allow snapshot and milestone BOM imports during development. 
+			This section is stripped out when a full release is prepared. -->
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>http://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>spring-snapshots</id>
+			<name>Spring Snapshots</name>
+			<url>http://repo.spring.io/snapshot</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>rabbit-milestones</id>
+			<name>Rabbit Milestones</name>
+			<url>https://dl.bintray.com/rabbitmq/maven-milestones</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+</project>

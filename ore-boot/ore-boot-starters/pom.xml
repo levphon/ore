@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.oreframework.boot</groupId>
+		<artifactId>ore-boot-parent</artifactId>
+		<version>1.0.10-SNAPSHOT</version>
+		<relativePath>../ore-boot-parent</relativePath>
+	</parent>
+	<artifactId>ore-boot-starters</artifactId>
+	<name>Ore Boot Starters</name>
+	<packaging>pom</packaging>
+	<description>Ore Boot Starters</description>
+	<properties>
+		<main.basedir>${basedir}/..</main.basedir>
+	</properties>
+	<modules>
+		<module>ore-boot-starter</module>
+		<module>ore-boot-starter-diamond</module>
+		<module>ore-boot-starter-dubbo</module>
+		<module>ore-boot-starter-kafka</module>
+		<module>ore-boot-starter-static</module>
+		<module>ore-boot-starter-datasource</module>
+		<module>ore-boot-starter-wechat</module>
+		<module>ore-boot-starter-redis</module>
+		<module>ore-boot-starter-cas</module>
+		<module>ore-boot-starter-office</module>
+		<module>ore-boot-starter-rop</module>
+	</modules>
+	
+	<distributionManagement>
+		<repository>
+			<id>nexus-releases</id>
+			<name>Local Nexus Releases Repository</name>
+			<url>http://192.168.3.233:8787/nexus/content/repositories/releases</url>
+		</repository>
+
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<name>Local Nexus Snapshots Repository</name>
+			<url>http://192.168.3.233:8787/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.oreframework.boot</groupId>
+	<version>1.0.10-SNAPSHOT</version>
+	<artifactId>ore-boot-build</artifactId>
+	<name>Ore Boot Build</name>
+	<description>Ore Boot Build</description>
+	<packaging>pom</packaging>
+	<prerequisites>
+		<maven>3.2.1</maven>
+	</prerequisites>
+	<properties>
+		<main.basedir>${basedir}</main.basedir>
+	</properties>
+	<distributionManagement>
+		<repository>
+			<id>nexus-releases</id>
+			<name>Local Nexus Releases Repository</name>
+			<url>http://192.168.3.233:8787/nexus/content/repositories/releases</url>
+		</repository>
+
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<name>Local Nexus Snapshots Repository</name>
+			<url>http://192.168.3.233:8787/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<modules>
+		<module>ore-boot-dependencies</module>
+		<module>ore-boot-parent</module>
+		<module>ore-boot</module>
+		<module>ore-boot-autoconfigure</module>
+		<module>ore-boot-starters</module>
+		<module>ore-boot-seed</module>
+	</modules>
+
+
+</project>

@@ -1,0 +1,8 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd">
+	<!-- timeToLiveSeconds:
+	设置对象在失效前允许存活时间（单位：秒）,
+	最大时间介于创建时间和失效时间之间 -->
+	<cache name="users" maxEntriesLocalHeap="2000" timeToLiveSeconds="10000">
+	</cache>
+</ehcache>

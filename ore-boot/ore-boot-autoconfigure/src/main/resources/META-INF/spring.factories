@@ -1,0 +1,33 @@
+#org.springframework.context.ApplicationListener=\
+#org.oreframework.boot.autoconfigure.dubbo.listener.DubboHolderListener
+
+# PropertySource Loaders
+org.springframework.boot.env.PropertySourceLoader=\
+org.oreframework.boot.autoconfigure.diamond.DiamondAutoConfiguration
+
+org.springframework.context.ApplicationContextInitializer=\
+org.oreframework.boot.autoconfigure.dubbo.context.DubboConfigurationApplicationContextInitializer
+
+# AutoConfigurations
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.oreframework.boot.autoconfigure.dubbo.DubboAutoConfiguration,\
+org.oreframework.boot.autoconfigure.datasource.customize.mybatis.MybatisPropertiesAutoConfiguration,\
+org.oreframework.boot.autoconfigure.datasource.customize.mybatis.druid.DruidAutoConfiguration,\
+org.oreframework.boot.autoconfigure.datasource.mybatis.MybatisAutoConfiguration,\
+org.oreframework.boot.autoconfigure.datasource.customize.mybatis.mapper.PrimaryMybatisAutoConfiguration,\
+org.oreframework.boot.autoconfigure.datasource.customize.mybatis.mapper.PrimaryMapperAutoConfiguration,\
+org.oreframework.boot.autoconfigure.datasource.mapper.MapperAutoConfiguration,\
+org.oreframework.boot.autoconfigure.datasource.customize.mybatis.mapper.SecondaryMybatisAutoConfiguration,\
+org.oreframework.boot.autoconfigure.datasource.customize.mybatis.mapper.SecondaryMapperAutoConfiguration,\
+org.oreframework.boot.autoconfigure.datasource.pagehelper.PageHelperAutoConfiguration,\
+org.oreframework.boot.autoconfigure.datasource.customize.mybatis.pagehelper.PrimaryPageHelperAutoConfiguration,\
+org.oreframework.boot.autoconfigure.datasource.customize.mybatis.pagehelper.SecondaryPageHelperAutoConfiguration,\
+org.oreframework.boot.autoconfigure.context.SpringContextAutoConfigure,\
+org.oreframework.boot.autoconfigure.kafka.KafkaAutoConfiguration,\
+org.oreframework.boot.autoconfigure.redis.RedisAutoConfiguration,\
+org.oreframework.boot.autoconfigure.cas.CasSecurityAutoConfigure,\
+org.oreframework.boot.autoconfigure.rop.RapidOpenPlatformAutoConfigure
+
+#org.oreframework.boot.autoconfigure.datasource.mybatis.multi.primary.MyBatisMapperScannerConfig
+#org.oreframework.boot.autoconfigure.datasource.mybatis.multi.secondary.MyBatisMapperScannerConfig
+#org.oreframework.boot.autoconfigure.mybatis.DataSourceAutoConfiguration
